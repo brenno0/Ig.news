@@ -1,4 +1,7 @@
 
+import React from 'react';
+import { SignInButton } from '../SignInButton';
+
 import styles from './styles.module.scss';
 
 import Image from 'next/image';
@@ -15,6 +18,7 @@ export function Header() {
                 <a href="" className={styles.active}>Home</a>
                 <a href="">Posts</a>
             </nav>
+            <SignInButton/>
             </div>
         </header>
     );
