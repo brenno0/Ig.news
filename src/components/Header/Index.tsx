@@ -6,8 +6,11 @@ import styles from './styles.module.scss';
 
 import Image from 'next/image';
 import logoSvg from '../../../public/images/logo.svg';
+import { ActiveLink } from '../ActiveLink';
+
 
 export function Header() {
+    
     return(
         <header className={styles.headerContainer}>
             <div className={styles.headerContent}>
@@ -15,8 +18,12 @@ export function Header() {
                 alt="ig.news"
                 />
             <nav>
-                <a href="" className={styles.active}>Home</a>
-                <a href="">Posts</a>
+                <ActiveLink activeClassName={styles.active} href="/" >
+                    <a>Home</a>
+                </ActiveLink>
+                <ActiveLink activeClassName={styles.active} href="/posts">
+                    <a >Posts</a>
+                </ActiveLink>
             </nav>
             <SignInButton/>
             </div>
