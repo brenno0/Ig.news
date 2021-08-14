@@ -37,8 +37,8 @@ export default function Post({ post }: PostProps){
     )
 }
 
-export const getServerSideProps: GetServerSideProps = async ({ req,params }) => {
-    const session = await getSession({req});
+export const getServerSideProps: GetServerSideProps = async ({ req, params }) => {
+    const session = await getSession({ req });
     const { slug } = params;
 
     if(!session?.activeSubscription){
@@ -49,12 +49,10 @@ export const getServerSideProps: GetServerSideProps = async ({ req,params }) => 
             }
         }
     }
-    if(session.activeSubscription){
-        return;
-    }
 
     const prismic = getPrismicClient(req);
-    const response = await prismic.getByUID('publication',String(slug),{})
+    const response = await prismic.getByUID('publication', String(slug),{});
+
     const post = {
         slug,
         title:RichText.asText(response.data.title),
@@ -64,11 +62,10 @@ export const getServerSideProps: GetServerSideProps = async ({ req,params }) => 
         month:'long',
         year:'numeric'
         })
-    }
-
+    };
     return  {
-       props:{
+       props: {
         post,
-       } 
+       },   
     }
 }

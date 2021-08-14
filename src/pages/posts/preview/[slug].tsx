@@ -83,7 +83,7 @@ export const getStaticPaths = () => {
     return  {
         props: {
          post,
-        } ,
+        },
         redirect: 60 * 30 // 30 minutos
      }
 
