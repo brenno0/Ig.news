@@ -5,7 +5,7 @@ import { getPrismicClient } from '../../service/prismic'
 import styles from './styles.module.scss'
 import Prismic from '@prismicio/client'
 import { RichText } from 'prismic-dom'
-import Link from 'next/Link'
+import Link from 'next/link'
 
 
 type Posts = {
