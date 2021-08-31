@@ -16,7 +16,7 @@ interface PostProps {
 }
 
 
-export function Post({ post }: PostProps){
+export default function Post({ post }: PostProps){
     return (
         <>
             <Head>
