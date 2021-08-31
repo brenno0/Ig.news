@@ -1,4 +1,4 @@
-import {AppProps} from 'next/App'
+import {AppProps} from 'next/app'
 import React from 'react';
 import { Header } from '../components/Header/Index';
 import '../styles/global.scss';
