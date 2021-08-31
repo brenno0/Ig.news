@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node --max_old_space_size=8192 <entry_file_path> --progress --env.<dev/prod>",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
