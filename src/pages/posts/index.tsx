@@ -45,7 +45,7 @@ export default function Posts({posts}:PostsProps){
 
 }
 
-export const getStaticProps:GetStaticProps = async () =>{
+export const getStaticProps:GetStaticProps = async () => {
     const prismic = getPrismicClient();
 
     const response = await prismic.query([

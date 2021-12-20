@@ -14,8 +14,6 @@ interface PostProps {
         updatedAt:string
     }
 }
-
-
 export default function Post({ post }: PostProps){
     return (
         <>
@@ -33,7 +31,6 @@ export default function Post({ post }: PostProps){
                 </article>
             </main>
         </>
-
     )
 }
 
