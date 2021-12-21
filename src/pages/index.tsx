@@ -12,7 +12,7 @@ import avatarSvg from '../../public/images/avatar.svg';
 interface HomeProps {
   product: {
     priceId:string;
-    amount:number;
+    amount:string;
   }
 }
 
@@ -33,7 +33,7 @@ export default function Home({ product } :HomeProps) {
               get access to all de publications <br /> 
               <span>for {product.amount} month</span>
              </p>
-             <SubscribeButton priceId={product.priceId} />
+             <SubscribeButton />
         </section>
         <Image src={avatarSvg} alt="Girl Coding" />
       </main>
